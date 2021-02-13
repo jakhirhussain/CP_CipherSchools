@@ -1,0 +1,36 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int a,aj,b,bj;
+    cin>>a>>aj>>b>>bj;
+    if(a>b && aj>=bj){
+    cout<<"No";
+    return 0;
+    }
+    if(b>a && bj>=aj){
+    cout<<"No";
+    return 0;
+    }
+    if(b>a)
+    {
+        int temp=a;
+        a=b;
+        b=temp;
+        temp=aj;
+        aj=bj;
+        bj=temp;
+    }
+    while(b<=a)
+    {
+        if(a==b)
+        {
+            cout<<"Yes";
+            return 0;
+        }
+        a=a+aj;
+        b=b+bj;
+    }
+    cout<<"No";
+	return 0;
+}
